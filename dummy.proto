@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package dummy;
+
+service DummyService {
+  rpc Dummy (EmptyRequest) returns (DummyResponse) {}
+}
+
+message EmptyRequest {}
+
+message DummyResponse {
+  int32 response_code = 1;
+  string response_msg = 2;
+}

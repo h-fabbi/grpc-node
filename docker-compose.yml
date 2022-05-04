@@ -1,0 +1,10 @@
+version: '3'
+services:
+  grpc-node:
+    container_name: grpc-node
+    build: .
+    working_dir: /usr/src/app/grpc-node
+    volumes:
+    - .:/usr/src/app/grpc-node
+    ports:
+    - "50051:50051"
